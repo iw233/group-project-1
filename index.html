@@ -266,7 +266,7 @@
         function calcGPA() {
 
             // Check if the overall GPA and Last 30 GPA inputs are valid to run
-            if (((overallGPA.value >= 0) && (overallGPA.value <= 4.0)) && ((last30GPA.value >= 0) && (last30GPA.value <= 4.0)))
+            if (((overallGPA.value >= 0) && (overallGPA.value <= 4.0)) && ((last30GPA.value >= 0) && (last30GPA.value <= 4.0)) || (overallGPA.value != null))
             {
                 let totGPA = 0;
                 for (let i = 0; i < gradeElements.length; ++i) 
@@ -314,7 +314,6 @@
                 //This displays the GPA that was calculated using the weighted courses to determine the likleyhood of getting accepted
                 outputGPA.innerHTML = "total GPA: " + String(totGPA);
             }
-            
             //This makes sure that the GPA is a valid number between 0 and 4.0
             else {
                 alert("Please enter valid GPA - Number between 0 and 4.0!");
